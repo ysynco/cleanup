@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CleanUp Cleaning Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #121212;
+    --surface: #1a1a1a;
+    --thread: #35353080;
+    --text: #f2f1ed;
+    --muted: #a3a19a;
+    --blue: #4db3ee;
+    --green: #4bc07f;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  *, *::before, *::after { box-sizing: inherit; }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  html, body { height: auto; margin: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  h1, h2, h3, .logo { font-family: 'Space Grotesk', 'Inter', sans-serif; }
+
+  .weave {
+    background-image:
+      repeating-linear-gradient(45deg, rgba(77,179,238,0.05) 0 2px, transparent 2px 26px),
+      repeating-linear-gradient(-45deg, rgba(75,192,127,0.05) 0 2px, transparent 2px 26px);
+  }
+
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  header.nav {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 24px; max-width: 960px; margin: 0 auto;
+  }
+  .logo { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.02em; }
+  .logo span:first-child { color: var(--blue); }
+  .logo span:last-child { color: var(--green); }
+
+  .hero {
+    padding: 64px 24px 80px;
+    border-bottom: 1px dashed var(--thread);
+  }
+  .hero-inner { max-width: 640px; }
+  .kicker { color: var(--muted); font-size: 0.95rem; margin: 0 0 14px; }
+  .hero h1 {
+    font-size: clamp(2.1rem, 5vw, 3.2rem);
+    line-height: 1.12;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 20px;
+  }
+  .hero h1 em {
+    font-style: normal;
+    background: linear-gradient(90deg, var(--blue), var(--green));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .hero p.lead {
+    color: var(--muted);
+    font-size: 1.08rem;
+    max-width: 46ch;
+    margin: 0 0 32px;
+  }
+  .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); }
+  .btn-primary { background: #1877f2; color: #fff; }
+  .btn-outline { border: 1px solid #3a3a35; color: var(--text); }
+  .btn-outline:hover { border-color: var(--green); }
+
+  section.services { padding: 72px 24px; }
+  .services h2 { font-size: 1.7rem; margin: 0 0 8px; }
+  .services .sub { color: var(--muted); margin: 0 0 40px; max-width: 50ch; }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: #2a2a26;
+    border: 1px dashed var(--thread);
+  }
+  .card {
+    background: var(--surface);
+    padding: 28px 24px;
+  }
+  .card h3 { font-size: 1.05rem; margin: 0 0 8px; font-weight: 600; }
+  .card p { color: var(--muted); font-size: 0.92rem; margin: 0; }
+  .card .mark { color: var(--green); font-size: 0.8rem; letter-spacing: 0.02em; margin: 0 0 10px; }
+
+  section.contact {
+    padding: 72px 24px 88px;
+    border-top: 1px dashed var(--thread);
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .contact h2 { font-size: 1.7rem; margin: 0 0 14px; }
+  .contact p { color: var(--muted); max-width: 42ch; }
+  .detail-list { list-style: none; margin: 28px 0 0; padding: 0; }
+  .detail-list li {
+    padding: 14px 0;
+    border-top: 1px dashed var(--thread);
+    display: flex; justify-content: space-between; gap: 16px;
+    font-size: 0.95rem;
+  }
+  .detail-list li:last-child { border-bottom: 1px dashed var(--thread); }
+  .detail-list .label { color: var(--muted); }
+  .detail-list a { color: var(--text); text-decoration: none; }
+  .detail-list a:hover { color: var(--blue); }
+
+  .quote {
+    background: var(--surface);
+    border: 1px dashed var(--thread);
+    padding: 28px;
+    border-radius: 8px;
+  }
+  .quote p { color: var(--text); font-size: 1rem; margin: 0 0 16px; }
+  .quote .stars { color: var(--green); font-size: 0.9rem; margin-bottom: 10px; letter-spacing: 0.06em; }
+  .quote .who { color: var(--muted); font-size: 0.85rem; }
+
+  footer {
+    border-top: 1px dashed var(--thread);
+    padding: 28px 24px;
+  }
+  .footer-inner {
+    max-width: 960px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 12px;
+  }
+  footer a { color: var(--muted); text-decoration: none; font-size: 0.9rem; }
+  footer a:hover { color: var(--text); }
+
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+
+  @media (max-width: 640px) {
+    .grid { grid-template-columns: 1fr; }
+    .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="logo"><span>Clean</span><span>Up</span></div>
+  <a href="https://www.facebook.com/cleanup.kl/" class="btn btn-outline" style="padding:8px 14px;font-size:0.85rem;">Facebook</a>
+</header>
+
+<section class="hero weave">
+  <div class="hero-inner">
+    <p class="kicker">Fabric cleaning specialists, Klang Valley</p>
+    <h1>Carpets, sofas, curtains and mattresses — <em>brought back to life.</em></h1>
+    <p class="lead">CleanUp Cleaning Services specialises in deep-cleaning fabric materials around your home, using methods built for the material, not a one size fits all spray and wipe.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="https://wa.me/60176470752" target="_blank" rel="noopener">Chat on WhatsApp       </a>
+      <a class="btn btn-outline" href="https://www.facebook.com/cleanup.kl/" target="_blank" rel="noopener">Message on Facebook</a>
+    </div>
+  </div>
+</section>
+
+<section class="services">
+  <div class="wrap">
+    <h2>What we clean</h2>
+    <p class="sub">Four fabric surfaces, four different routines — each one matched to the material so it comes back clean without wearing it down.</p>
+    <div class="grid">
+      <div class="card">
+        <p class="mark">Floors</p>
+        <h3>Carpet cleaning</h3>
+        <p>Deep extraction that lifts ground-in dirt and odour from wall-to-wall carpet and rugs.</p>
+      </div>
+      <div class="card">
+        <p class="mark">Seating</p>
+        <h3>Sofa &amp; upholstery</h3>
+        <p>Fabric-safe treatment for sofas and upholstered chairs, including stain and odour removal.</p>
+      </div>
+      <div class="card">
+        <p class="mark">Windows</p>
+        <h3>Curtain cleaning</h3>
+        <p>On-site cleaning for curtains and drapes, so you don't have to take them down.</p>
+      </div>
+      <div class="card">
+        <p class="mark">Sleep</p>
+        <h3>Mattress cleaning</h3>
+        <p>Dust mite, sweat and stain treatment to leave your mattress fresh to sleep on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact weave">
+  <div class="wrap contact-grid">
+    <div>
+      <h2>Get in touch</h2>
+      <p>Ask us anything — reach out by phone, WhatsApp or email, and we'll help you work out what your fabric needs.</p>
+      <ul class="detail-list">
+        <li><span class="label">Phone</span> <a href="tel:0176470752">017-647 0752</a></li>
+        <li><span class="label">WhatsApp</span> <a href="https://wa.me/60176470752" target="_blank" rel="noopener">017-647 0752</a></li>
+        <li><span class="label">Email</span> <a href="mailto:sales@cleanupmy.com.com">sales@cleanupmy.com.com</a></li>
+        <li><span class="label">Facebook</span> <a href="https://www.facebook.com/cleanup.kl/" target="_blank" rel="noopener">facebook.com/cleanup.kl</a></li>
+      </ul>
+    </div>
+    <div class="quote">
+      <p class="stars">★★★★★</p>
+      <p>252 followers on Facebook and counting — trusted by households across the Klang Valley for carpet, sofa, curtain and mattress cleaning.</p>
+      <p class="who">CleanUp Cleaning Services</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <span class="logo" style="font-size:1rem;"><span>Clean</span><span>Up</span> Cleaning Services</span>
+    <a href="https://www.facebook.com/cleanup.kl/" target="_blank" rel="noopener">facebook.com/cleanup.kl</a>
+  </div>
+</footer>
+
+</body>
+</html>
