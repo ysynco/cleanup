@@ -1,0 +1,540 @@
+:root {
+    --bg: #eceff1;
+    --surface: #fff;
+    --line: #d3d9de;
+    --text: #1d2730;
+    --muted: #586470;
+    --blue: #1b7fc9;
+    --green: #2a9d68;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px)
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit
+}
+
+html {
+    scroll-padding-top: env(safe-area-inset-top, 0px)
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased
+}
+
+h1,
+h2,
+h3,
+.logo {
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    margin: 0
+}
+
+.wrap {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px 24px
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    text-decoration: none
+}
+
+.logo span:first-child {
+    color: var(--blue)
+}
+
+.logo span:last-child {
+    color: var(--green)
+}
+
+.social {
+    display: flex;
+    gap: 10px
+}
+
+.social a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text)
+}
+
+.social a:hover {
+    border-color: var(--blue);
+    color: var(--blue)
+}
+
+.social svg {
+    width: 19px;
+    height: 19px;
+    fill: currentColor
+}
+
+.social svg.stroke {
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2
+}
+
+.hero {
+    padding: 56px 24px 72px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(135deg, #e3ecf3, #e4efe9)
+}
+
+.hero-inner {
+    max-width: 960px;
+    margin: 0 auto
+}
+
+.kicker {
+    color: var(--muted);
+    margin: 0 0 14px
+}
+
+.hero h1 {
+    font-size: clamp(2rem, 5vw, 3.1rem);
+    line-height: 1.12;
+    max-width: 20ch;
+    margin-bottom: 18px
+}
+
+.hero h1 em {
+    font-style: normal;
+    color: var(--blue)
+}
+
+.lead {
+    color: var(--muted);
+    font-size: 1.07rem;
+    max-width: 48ch;
+    margin: 0 0 28px
+}
+
+.cta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: .95rem;
+    border: 1px solid transparent;
+    cursor: pointer
+}
+
+.btn-primary {
+    background: var(--green);
+    color: #fff
+}
+
+.btn-outline {
+    border-color: #b9c2c9;
+    color: var(--text);
+    background: var(--surface)
+}
+
+.btn:hover {
+    filter: brightness(.95)
+}
+
+section.block {
+    padding: 68px 24px;
+    border-bottom: 1px solid var(--line)
+}
+
+.block h2 {
+    font-size: 1.7rem;
+    margin-bottom: 8px
+}
+
+.sub {
+    color: var(--muted);
+    margin: 0 0 36px;
+    max-width: 54ch
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 24px;
+    color: inherit;
+    text-decoration: none;
+    display: block
+}
+
+a.card:hover {
+    border-color: var(--blue)
+}
+
+.card h3 {
+    font-size: 1.05rem;
+    margin-bottom: 6px
+}
+
+.card p {
+    color: var(--muted);
+    font-size: .92rem;
+    margin: 0
+}
+
+.card .more {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--blue);
+    font-weight: 600;
+    font-size: .88rem
+}
+
+.why {
+    grid-template-columns: repeat(4, 1fr)
+}
+
+.why .card {
+    border-top: 3px solid var(--green)
+}
+
+.why .big {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--blue);
+    line-height: 1.1;
+    margin-bottom: 8px
+}
+
+.reviews {
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr))
+}
+
+.review .stars {
+    color: #e0a82e;
+    letter-spacing: .08em;
+    margin-bottom: 8px
+}
+
+.review .stars .off {
+    color: #c9d0d6
+}
+
+.review p {
+    color: var(--text);
+    font-size: .93rem
+}
+
+.review .src {
+    color: var(--muted);
+    font-size: .8rem;
+    margin-top: 12px
+}
+
+.cover {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 40px;
+    align-items: center
+}
+
+.map {
+    width: 100%;
+    height: auto;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 10px
+}
+
+.map .sel {
+    fill: #cfe9dc;
+    stroke: var(--green);
+    stroke-width: 2
+}
+
+.map .sn {
+    fill: #d6e6f3;
+    stroke: var(--blue);
+    stroke-width: 2
+}
+
+.map .kl {
+    fill: var(--blue)
+}
+
+.map .link {
+    stroke: var(--muted);
+    stroke-width: 1.5;
+    stroke-dasharray: 5 5;
+    fill: none
+}
+
+.map text {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    fill: var(--text);
+    font-size: 15px
+}
+
+.map text.w {
+    fill: #fff
+}
+
+.areas {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.areas li {
+    padding: 12px 0;
+    border-top: 1px solid var(--line)
+}
+
+.areas li:last-child {
+    border-bottom: 1px solid var(--line)
+}
+
+.areas b {
+    display: block
+}
+
+.areas span {
+    color: var(--muted);
+    font-size: .9rem
+}
+
+.order-form {
+    max-width: 620px;
+    display: grid;
+    gap: 20px
+}
+
+.field-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px
+}
+
+.field label {
+    display: block;
+    font-size: .85rem;
+    color: var(--muted);
+    margin-bottom: 6px
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    background: var(--surface);
+    border: 1px solid #b9c2c9;
+    border-radius: 6px;
+    padding: 10px 12px;
+    color: var(--text);
+    font: inherit;
+    font-size: .95rem
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: var(--blue)
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 90px
+}
+
+.order-note {
+    color: var(--muted);
+    font-size: .82rem;
+    margin: 10px 0 0
+}
+
+.form-status {
+    font-size: .88rem;
+    color: var(--green);
+    min-height: 1.2em;
+    margin: 6px 0 0
+}
+
+.form-status.error {
+    color: #c2561a
+}
+
+.contact-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-width: 520px
+}
+
+.contact-list li {
+    padding: 14px 0;
+    border-top: 1px solid var(--line);
+    display: flex;
+    justify-content: space-between;
+    gap: 16px
+}
+
+.contact-list li:last-child {
+    border-bottom: 1px solid var(--line)
+}
+
+.contact-list .label {
+    color: var(--muted)
+}
+
+.contact-list a {
+    color: var(--text);
+    text-decoration: none
+}
+
+.contact-list a:hover {
+    color: var(--blue)
+}
+
+footer {
+    padding: 26px 24px
+}
+
+.footer-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center
+}
+
+footer a {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: .9rem
+}
+
+.back {
+    display: inline-block;
+    margin: 8px 0 20px;
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: 600
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 14px
+}
+
+.slot {
+    position: relative;
+    aspect-ratio: 4/3;
+    border: 1px dashed #a9b4bc;
+    border-radius: 10px;
+    background: var(--surface);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    color: var(--muted);
+    font-size: .85rem
+}
+
+.slot img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px
+}
+
+@media(max-width:760px) {
+
+    .grid,
+    .field-row,
+    .cover {
+        grid-template-columns: 1fr
+    }
+
+    .why {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:420px) {
+    .why {
+        grid-template-columns: 1fr
+    }
+}
+
+.map {
+    height: 400px;
+    z-index: 0
+}
+
+.area-label {
+    background: rgba(255, 255, 255, .9);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 600;
+    color: var(--text);
+    box-shadow: none
+}
+
+.area-label::before {
+    display: none
+}
+
+@media(max-width:760px) {
+    .map {
+        height: 320px
+    }
+}
