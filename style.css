@@ -188,8 +188,8 @@ section.block {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
 .card {
@@ -215,6 +215,8 @@ a.card:hover {
     color: var(--muted);
     font-size: .92rem;
     margin: 0
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .card .more {
