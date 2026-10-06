@@ -10,7 +10,6 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -149,8 +148,20 @@
       <h2>Where we work</h2>
       <p class="sub">We come to you across three areas.</p>
       <div class="cover">
-        <div id="map" class="map" role="region"
-          aria-label="Map of our coverage areas: Selangor, Kuala Lumpur and Seremban"></div>
+        <!-- <div class="map" role="img" aria-label="Map of our coverage areas: Selangor, Kuala Lumpur and Seremban"
+          style="background:#eef3f6;display:flex;align-items:center;justify-content:center">
+          <svg viewBox="0 0 400 340" style="width:100%;height:100%;max-height:100%" font-family="Inter, sans-serif">
+            <circle cx="165" cy="135" r="130" fill="#2a9d68" fill-opacity=".14" stroke="#2a9d68" stroke-width="2" />
+            <circle cx="281" cy="262" r="43" fill="#14a3a3" fill-opacity=".2" stroke="#14a3a3" stroke-width="2" />
+            <circle cx="206" cy="138" r="38" fill="#1b7fc9" fill-opacity=".25" stroke="#1b7fc9" stroke-width="2" />
+            <g font-size="15" font-weight="600" text-anchor="middle" fill="#1d2b36">
+              <text x="120" y="75">Selangor</text>
+              <text x="206" y="143">Kuala Lumpur</text>
+              <text x="281" y="267">Seremban</text>
+            </g>
+          </svg>
+        </div> -->
+        <img class="map" src="images/coverage-map.jpg" alt="Map of our coverage areas: Selangor, Kuala Lumpur and Seremban" loading="lazy">
         <ul class="areas">
           <li><b>Selangor</b><span>Shah Alam, Petaling Jaya, Kajang, Klang and nearby</span></li>
           <li><b>Kuala Lumpur</b><span>Across the city</span></li>
@@ -194,12 +205,12 @@
         <li><span class="label">Phone</span><a href="tel:0176470752">017-647 0752</a></li>
         <li><span class="label">WhatsApp</span><a href="https://wa.me/60176470752" target="_blank"
             rel="noopener">017-647 0752</a></li>
-        <li><span class="label">Email</span><a href="mailto:sales@cleanupmy.com.com">sales@cleanupmy.com.com</a></li>
+        <li><span class="label">Email</span><a href="mailto:sales@cleanupmy.com">sales@cleanupmy.com.com</a></li>
         <li><span class="label">Facebook</span><a href="https://www.facebook.com/cleanup.kl/" target="_blank"
             rel="noopener">facebook.com/cleanup.kl</a></li>
         <li><span class="label">Instagram</span><a href="https://www.instagram.com/cleanupcleaningmy" target="_blank"
             rel="noopener">@cleanupcleaningmy</a></li>
-        <li><span class="label">TikTok</span><a href="https://www.tiktok.com/@cleanupmy" target="_blank"
+        <li><span class="label">TikTok</span><a href="https://www.tiktok.com/@cleanupcleaning" target="_blank"
             rel="noopener">@cleanupmy</a></li>
       </ul>
     </div>
@@ -221,25 +232,6 @@
       st.textContent = 'Opening WhatsApp…';
       window.open('https://wa.me/60176470752?text=' + encodeURIComponent(l.join('\n')), '_blank', 'noopener');
     });
-  </script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
-  <script>
-    (function () {
-      if (!window.L) return;
-      var map = L.map('map', { scrollWheelZoom: false });
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 18, attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors' }).addTo(map);
-      var areas = [
-        { n: 'Selangor', c: [3.15, 101.55], r: 48000, col: '#2a9d68', o: .14 },
-        { n: 'Seremban', c: [2.7259, 101.9378], r: 16000, col: '#14a3a3', o: .2 },
-        { n: 'Kuala Lumpur', c: [3.139, 101.6869], r: 14000, col: '#1b7fc9', o: .25 }
-      ];
-      var g = L.featureGroup();
-      areas.forEach(function (a) {
-        var c = L.circle(a.c, { radius: a.r, color: a.col, weight: 2, fillColor: a.col, fillOpacity: a.o }).addTo(g);
-        c.bindTooltip(a.n, { permanent: true, direction: 'center', className: 'area-label' });
-      });
-      g.addTo(map); map.fitBounds(g.getBounds(), { padding: [10, 10] });
-    })();
   </script>
 </body>
 

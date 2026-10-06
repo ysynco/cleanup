@@ -277,9 +277,9 @@ a.card:hover {
 .map {
     width: 100%;
     height: auto;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 10px
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
 }
 
 .map .sel {
