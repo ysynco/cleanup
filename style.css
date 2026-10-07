@@ -54,19 +54,36 @@ h3,
 }
 
 .logo {
-    font-size: 1.3rem;
-    font-weight: 700;
-    letter-spacing: -.02em;
-    text-decoration: none
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1.15;
+    text-decoration: none;
 }
 
-.logo span:first-child {
+.tagline {
+    font-family: 'Inter', -apple-system, sans-serif;
+    font-size: .74rem;
+    font-weight: 500;
+    letter-spacing: .03em;
+    color: var(--muted);
+    margin-top: 2px
+}
+
+@media(max-width:420px) {
+    .tagline { font-size: .66rem }
+}
+
+/* .logo span:first-child {
     color: var(--blue)
 }
 
 .logo span:last-child {
     color: var(--green)
-}
+} */
+
+.logo-text span:first-child { color: var(--blue) }
+.logo-text span:last-child  { color: var(--green) }
 
 .social {
     display: flex;
@@ -133,8 +150,14 @@ h3,
 .lead {
     color: var(--muted);
     font-size: 1.07rem;
-    max-width: 48ch;
-    margin: 0 0 28px
+    max-width: 62ch;
+    margin: 0 0 18px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.lead:last-of-type {
+    margin-bottom: 28px;
 }
 
 .cta-row {
@@ -214,7 +237,7 @@ a.card:hover {
 .card p {
     color: var(--muted);
     font-size: .92rem;
-    margin: 0
+    margin: 0;
     text-align: justify;
     text-justify: inter-word;
 }
