@@ -744,3 +744,28 @@ button:focus-visible {
     font-weight: 600;
     color: var(--blue)
 }
+
+/* Add-ons table (multiple price columns) */
+.price-card.wide {
+    grid-column: 1 / -1
+}
+
+.price-scroll {
+    overflow-x: auto
+}
+
+.price-table.multi th,
+.price-table.multi td {
+    padding-right: 12px
+}
+
+.price-table.multi th:not(:first-child),
+.price-table.multi td:not(:first-child) {
+    text-align: right;
+    white-space: nowrap
+}
+
+.price-table.multi td:not(:first-child) {
+    font-weight: 600;
+    color: var(--blue)
+}
