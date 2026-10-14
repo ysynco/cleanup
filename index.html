@@ -14,25 +14,25 @@
 </head>
 
 <body>
-  <header class="nav"> 
+  <header class="nav">
     <a class="logo" href="index.html">
       <span class="logo-text"><span>Clean</span><span>Up</span></span>
-      <small class="tagline">Leave your dirty work to us.</small>
+      <small class="tagline" data-i18n="tagline">Leave your dirty work to us.</small>
     </a>
     <nav class="social" aria-label="Social media">
-      <a href="https://www.facebook.com/cleanup.kl/" target="_blank" rel="noopener" aria-label="Facebook"><svg
-          viewBox="0 0 24 24">
+      <a class="fb" href="https://www.facebook.com/cleanup.kl/" target="_blank" rel="noopener"
+        aria-label="Facebook"><svg viewBox="0 0 24 24">
           <path
             d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z" />
         </svg></a>
-      <a href="https://www.instagram.com/cleanupcleaningmy" target="_blank" rel="noopener" aria-label="Instagram"><svg
-          class="stroke" viewBox="0 0 24 24">
+      <a class="ig" href="https://www.instagram.com/cleanupcleaningmy" target="_blank" rel="noopener"
+        aria-label="Instagram"><svg class="stroke" viewBox="0 0 24 24">
           <rect x="3" y="3" width="18" height="18" rx="5" />
           <circle cx="12" cy="12" r="4" />
           <circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none" />
         </svg></a>
-      <a href="https://www.tiktok.com/@cleanupcleaning" target="_blank" rel="noopener" aria-label="TikTok"><svg
-          viewBox="0 0 24 24">
+      <a class="tt" href="https://www.tiktok.com/@cleanupcleaning" target="_blank" rel="noopener"
+        aria-label="TikTok"><svg viewBox="0 0 24 24">
           <path
             d="M19.6 6.8a4.8 4.8 0 0 1-3-1.6A4.8 4.8 0 0 1 15.4 2h-3.3v13.4a2.8 2.8 0 1 1-2-2.7V9.3a6.1 6.1 0 1 0 5.3 6V8.7a8 8 0 0 0 4.6 1.5V6.8z" />
         </svg></a>
@@ -41,52 +41,64 @@
 
   <section class="hero">
     <div class="hero-inner">
-      <p class="kicker">Serving KL, Selangor &amp; Seremban since 2021</p>
-      <h1>Welcome to <em>CleanUp</em></h1>
+      <div class="lang-wrap">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" class="lang-btn" data-lang="ms" aria-pressed="false">BM</button>
+        </div>
+      </div>
 
-      <p class="lead">
+      <p class="kicker" data-i18n="kicker">Serving KL, Selangor &amp; Seremban since 2021</p>
+      <h1 data-i18n="h1">Welcome to <em>CleanUp</em></h1>
+
+      <p class="lead" data-i18n="lead1">
         We specialise in professional fabric cleaning services for both residential
         and commercial spaces. From sofas, mattresses and carpets to office chairs, curtains and
         vehicle interiors, our trained team uses professional cleaning equipment and proven
         techniques to deliver a cleaner, fresher and healthier environment.
       </p>
-      <p class="lead">
+      <p class="lead" data-i18n="lead2">
         With years of experience in fabric detailing, we take pride in providing reliable service,
         quality workmanship and convenient on-site cleaning, so you can leave the dirty work to us.
       </p>
 
       <div class="cta-row">
-        <a class="btn btn-primary" href="https://wa.me/60176470752" target="_blank" rel="noopener">Chat on WhatsApp</a>
-        <a class="btn btn-outline" href="#quote">Get a quote</a>
+        <a class="btn btn-primary" href="https://wa.me/60176470752" target="_blank" rel="noopener"
+          data-i18n="btn_wa">Chat on WhatsApp</a>
+        <a class="btn btn-outline" href="#quote" data-i18n="btn_quote">Get a quote</a>
       </div>
     </div>
   </section>
 
   <section class="block">
     <div class="wrap">
-      <h2>Why choose CleanUp</h2>
-      <p class="sub">The standards you can expect every time you book with us.</p>
+      <h2 data-i18n="why_h">Why choose CleanUp</h2>
+      <p class="sub" data-i18n="why_sub">The standards you can expect every time you book with us.</p>
       <div class="grid why">
         <div class="card">
-          <div class="big">6+ years</div>
-          <h3>Proven experience</h3>
-          <p>Over six years of professional fabric cleaning for homes across Selangor, Kuala Lumpur and Seremban.</p>
+          <div class="big" data-i18n="why1_big">6+ years</div>
+          <h3 data-i18n="why1_h">Proven experience</h3>
+          <p data-i18n="why1_p">Over six years of professional fabric cleaning for homes across Selangor, Kuala Lumpur
+            and Seremban.</p>
         </div>
         <div class="card">
-          <div class="big">Pro grade</div>
-          <h3>Professional equipment</h3>
-          <p>Professional grade machines and cleaning solutions, chosen to suit each fabric and type of stain.</p>
+          <div class="big" data-i18n="why2_big">Pro grade</div>
+          <h3 data-i18n="why2_h">Professional equipment</h3>
+          <p data-i18n="why2_p">Professional grade machines and cleaning solutions, chosen to suit each fabric and type
+            of stain.</p>
         </div>
         <div class="card">
-          <div class="big">Trained</div>
-          <h3>Skilled technicians</h3>
-          <p>Our team is trained to identify fabric types and use the right method for your carpets, sofas, curtains and
+          <div class="big" data-i18n="why3_big">Trained</div>
+          <h3 data-i18n="why3_h">Skilled technicians</h3>
+          <p data-i18n="why3_p">Our team is trained to identify fabric types and use the right method for your carpets,
+            sofas, curtains and
             mattresses.</p>
         </div>
         <div class="card">
-          <div class="big">3 day</div>
-          <h3>Service guarantee</h3>
-          <p>Not satisfied with the result? Let us know within 3 days and we will return to re clean at no extra charge.
+          <div class="big" data-i18n="why4_big">3 day</div>
+          <h3 data-i18n="why4_h">Service guarantee</h3>
+          <p data-i18n="why4_p">Not satisfied with the result? Let us know within 3 days and we will return to re clean
+            at no extra charge.
           </p>
         </div>
       </div>
@@ -95,33 +107,34 @@
 
   <section class="block" id="services">
     <div class="wrap">
-      <h2>What we clean</h2>
-      <p class="sub">Five types of fabric items, each cleaned with the right method. Tap one to see photos of our work.</p>
+      <h2 data-i18n="svc_h">What we clean</h2>
+      <p class="sub" data-i18n="svc_sub">Five types of fabric items, each cleaned with the right method. Tap one to see
+        photos of our work.</p>
       <div class="grid">
-        <a class="card" href="carpet.html">
-          <h3>Carpet cleaning</h3>
-          <p>Deep extraction that lifts ground in dirt and odour from wall to wall carpet and rugs.</p><span
-            class="more">See photos</span>
-        </a>
         <a class="card" href="sofa.html">
-          <h3>Sofa &amp; upholstery</h3>
-          <p>Fabric safe treatment for sofas and upholstered chairs, including stain and odour removal.</p><span
-            class="more">See photos</span>
+          <h3 data-i18n="sofa_h">Sofa &amp; upholstery</h3>
+          <p data-i18n="sofa_p">Fabric safe treatment for sofas and upholstered chairs, including stain and odour
+            removal.</p><span class="more" data-i18n="see_photos">See photos</span>
+        </a>
+        <a class="card" href="carpet.html">
+          <h3 data-i18n="carpet_h">Carpet cleaning</h3>
+          <p data-i18n="carpet_p">Deep extraction that lifts ground in dirt and odour from wall to wall carpet and rugs.
+          </p><span class="more" data-i18n="see_photos">See photos</span>
         </a>
         <a class="card" href="curtain.html">
-          <h3>Curtain cleaning</h3>
-          <p>On site cleaning for curtains and drapes, so you don't have to take them down.</p><span class="more">See
-            photos</span>
+          <h3 data-i18n="curtain_h">Curtain cleaning</h3>
+          <p data-i18n="curtain_p">On site cleaning for curtains and drapes, so you don't have to take them down.</p>
+          <span class="more" data-i18n="see_photos">See photos</span>
         </a>
         <a class="card" href="mattress.html">
-          <h3>Mattress cleaning</h3>
-          <p>Dust mite, sweat and stain treatment to leave your mattress fresh to sleep on.</p><span class="more">See
-            photos</span>
+          <h3 data-i18n="mattress_h">Mattress cleaning</h3>
+          <p data-i18n="mattress_p">Dust mite, sweat and stain treatment to leave your mattress fresh to sleep on.</p>
+          <span class="more" data-i18n="see_photos">See photos</span>
         </a>
         <a class="card" href="baby.html">
-          <h3>Baby items</h3>
-          <p>Gentle, thorough cleaning for strollers, playpens and child car seats, removing milk stains, spills and odours.</p><span
-            class="more">See photos</span>
+          <h3 data-i18n="baby_h">Baby items</h3>
+          <p data-i18n="baby_p">Gentle, thorough cleaning for strollers, playpens and child car seats, removing milk
+            stains, spills and odours.</p><span class="more" data-i18n="see_photos">See photos</span>
         </a>
       </div>
     </div>
@@ -129,39 +142,39 @@
 
   <section class="block" style="background:#e4eaee">
     <div class="wrap">
-      <h2>What customers say on Google</h2>
-      <p class="sub">Real reviews from people we have cleaned for.</p>
+      <h2 data-i18n="rev_h">What customers say on Google</h2>
+      <p class="sub" data-i18n="rev_sub">Real reviews from people we have cleaned for.</p>
       <div class="grid reviews">
         <div class="card review">
           <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Requested for sofa cleaning. Amazing experience, good and clean work. Abang is friendly too! Keep it up.
             Will surely repeat.</p>
-          <div class="src">Google review</div>
+          <div class="src" data-i18n="src">Google review</div>
         </div>
         <div class="card review">
           <div class="stars" role="img" aria-label="4 out of 5 stars">★★★★<span class="off">★</span></div>
           <p>My first time using CleanUp service to clean my carpets. They are very detailed in making sure not only my
             carpets but floor beneath clean with refreshing smell. Hope it will last till raya n make my guests envy me,
             The carpets look like brand new.</p>
-          <div class="src">Google review</div>
+          <div class="src" data-i18n="src">Google review</div>
         </div>
         <div class="card review">
           <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Super service! I messaged and was able to get my mattress cleaned the same day! Only took about 30 minutes
             and my bed is good as new! 11/10 would recommend!</p>
-          <div class="src">Google review</div>
+          <div class="src" data-i18n="src">Google review</div>
         </div>
         <div class="card review">
           <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
           <p>I have had my Sofa and Car-Seats getting cleaned awesomely by the CleanUp team! I am very satisfied with
             their top and professional services, will repeat again for sure! Highly recommended 🤙🏽</p>
-          <div class="src">Google review</div>
+          <div class="src" data-i18n="src">Google review</div>
         </div>
         <div class="card review">
           <div class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</div>
           <p>Alhamdulillah the boys did well for cleanliness, plus with white color can see it nice clean, really
             recommended, affordable charges will repeat as usual 👍🏻👍🏻👍🏻</p>
-          <div class="src">Google review</div>
+          <div class="src" data-i18n="src">Google review</div>
         </div>
       </div>
     </div>
@@ -169,27 +182,16 @@
 
   <section class="block">
     <div class="wrap">
-      <h2>Where we work</h2>
-      <p class="sub">We come to you across three areas.</p>
+      <h2 data-i18n="where_h">Where we work</h2>
+      <p class="sub" data-i18n="where_sub">We come to you across three areas.</p>
       <div class="cover">
-        <!-- <div class="map" role="img" aria-label="Map of our coverage areas: Selangor, Kuala Lumpur and Seremban"
-          style="background:#eef3f6;display:flex;align-items:center;justify-content:center">
-          <svg viewBox="0 0 400 340" style="width:100%;height:100%;max-height:100%" font-family="Inter, sans-serif">
-            <circle cx="165" cy="135" r="130" fill="#2a9d68" fill-opacity=".14" stroke="#2a9d68" stroke-width="2" />
-            <circle cx="281" cy="262" r="43" fill="#14a3a3" fill-opacity=".2" stroke="#14a3a3" stroke-width="2" />
-            <circle cx="206" cy="138" r="38" fill="#1b7fc9" fill-opacity=".25" stroke="#1b7fc9" stroke-width="2" />
-            <g font-size="15" font-weight="600" text-anchor="middle" fill="#1d2b36">
-              <text x="120" y="75">Selangor</text>
-              <text x="206" y="143">Kuala Lumpur</text>
-              <text x="281" y="267">Seremban</text>
-            </g>
-          </svg>
-        </div> -->
-        <img class="map" src="images/coverage-map.jpg" alt="Map of our coverage areas: Selangor, Kuala Lumpur and Seremban" loading="lazy">
+        <img class="map" src="images/coverage-map.jpg"
+          alt="Map of our coverage areas: Selangor, Kuala Lumpur and Seremban" loading="lazy">
         <ul class="areas">
-          <li><b>Selangor</b><span>Shah Alam, Petaling Jaya, Kajang, Klang and nearby</span></li>
-          <li><b>Kuala Lumpur</b><span>Across the city</span></li>
-          <li><b>Seremban</b><span>Seremban and surrounding areas</span></li>
+          <li><b data-i18n="area1_b">Selangor</b><span data-i18n="area1_s">Shah Alam, Petaling Jaya, Kajang, Klang and
+              nearby</span></li>
+          <li><b data-i18n="area2_b">Kuala Lumpur</b><span data-i18n="area2_s">Across the city</span></li>
+          <li><b data-i18n="area3_b">Seremban</b><span data-i18n="area3_s">Seremban and surrounding areas</span></li>
         </ul>
       </div>
     </div>
@@ -197,24 +199,29 @@
 
   <section class="block" id="quote">
     <div class="wrap">
-      <h2>Get a quote</h2>
-      <p class="sub">Tell us what needs cleaning and we'll send it straight to our WhatsApp so we can reply with a
+      <h2 data-i18n="quote_h">Get a quote</h2>
+      <p class="sub" data-i18n="quote_sub">Tell us what needs cleaning and we'll send it straight to our WhatsApp so we
+        can reply with a
         quotation.</p>
       <div class="order-form">
         <div class="field-row">
-          <div class="field"><label for="ord-name">Your name</label><input type="text" id="ord-name"
-              placeholder="e.g. Afiq Lee"></div>
-          <div class="field"><label for="ord-phone">Your phone number</label><input type="tel" id="ord-phone"
-              placeholder="e.g. 012-345 6789"></div>
+          <div class="field"><label for="ord-name" data-i18n="f_name">Your name</label><input type="text" id="ord-name"
+              placeholder="e.g. Afiq Lee" data-i18n-ph="ph_name"></div>
+          <div class="field"><label for="ord-phone" data-i18n="f_phone">Your phone number</label><input type="tel"
+              id="ord-phone" placeholder="e.g. 012-345 6789" data-i18n-ph="ph_phone"></div>
         </div>
-        <div class="field"><label for="ord-area">Address / area</label><input type="text" id="ord-area"
-            placeholder="e.g. Shah Alam, Selangor"></div>
-        <div class="field"><label for="ord-items">What needs cleaning?</label><textarea id="ord-items"
-            placeholder="e.g. 1 sofa (3-seater), 2 mattresses, living room carpet"></textarea></div>
-        <div class="field"><label for="ord-notes">Anything else we should know?</label><textarea id="ord-notes"
-            placeholder="e.g. stains, preferred date, access details"></textarea></div>
-        <div><button type="button" class="btn btn-primary" id="ord-submit">Send order via WhatsApp</button>
-          <p class="order-note">This opens WhatsApp with your order filled in. Just hit send and we'll reply with a
+        <div class="field"><label for="ord-area" data-i18n="f_area">Address / area</label><input type="text"
+            id="ord-area" placeholder="e.g. Shah Alam, Selangor" data-i18n-ph="ph_area"></div>
+        <div class="field"><label for="ord-items" data-i18n="f_items">What needs cleaning?</label><textarea
+            id="ord-items" placeholder="e.g. 1 sofa (3-seater), 2 mattresses, living room carpet"
+            data-i18n-ph="ph_items"></textarea></div>
+        <div class="field"><label for="ord-notes" data-i18n="f_notes">Anything else we should know?</label><textarea
+            id="ord-notes" placeholder="e.g. stains, preferred date, access details" data-i18n-ph="ph_notes"></textarea>
+        </div>
+        <div><button type="button" class="btn btn-primary" id="ord-submit" data-i18n="f_submit">Send order via
+            WhatsApp</button>
+          <p class="order-note" data-i18n="f_note">This opens WhatsApp with your order filled in. Just hit send and
+            we'll reply with a
             quotation.</p>
           <p class="form-status" id="ord-status" role="status"></p>
         </div>
@@ -222,20 +229,64 @@
     </div>
   </section>
 
+  <section class="block" id="faq">
+    <div class="wrap">
+      <h2 data-i18n="faq_h">Frequently asked questions</h2>
+      <p class="sub" data-i18n="faq_sub">Quick answers to what customers ask us most.</p>
+      <div class="faq">
+        <details class="faq-item">
+          <summary data-i18n="faq1_q">Which areas do you cover?</summary>
+          <p data-i18n="faq1_a">We serve Selangor (including Shah Alam, Petaling Jaya, Kajang and Klang), Kuala Lumpur
+            and Seremban, along with nearby areas.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq2_q">How do I get a quotation?</summary>
+          <p data-i18n="faq2_a">Fill in the quote form above, or message us on WhatsApp, and tell us what needs
+            cleaning. We will reply with a quotation.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq3_q">Do I need to bring my items to you?</summary>
+          <p data-i18n="faq3_a">No. We come to you and clean on site, so your sofas, mattresses, carpets and curtains
+            stay where they are.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq4_q">What can you clean?</summary>
+          <p data-i18n="faq4_a">Carpets and rugs, sofas and upholstered chairs, curtains, mattresses, and baby items
+            such as strollers, playpens and child car seats. We also clean office chairs and vehicle interiors.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq5_q">What if I am not happy with the result?</summary>
+          <p data-i18n="faq5_a">Let us know within 3 days and we will return to re clean at no extra charge.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq6_q">Do you clean homes and commercial spaces?</summary>
+          <p data-i18n="faq6_a">Yes. We clean fabric items for both residential and commercial customers, including
+            offices.</p>
+        </details>
+        <details class="faq-item">
+          <summary data-i18n="faq7_q">How long until my items are dry?</summary>
+          <p data-i18n="faq7_a">It depends on the fabric, the item and how well the room is ventilated. We will advise
+            you on drying time after the cleaning.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
   <section class="block" style="border-bottom:0">
     <div class="wrap">
-      <h2 style="margin-bottom:20px">Get in touch</h2>
+      <h2 style="margin-bottom:20px" data-i18n="touch_h">Get in touch</h2>
       <ul class="contact-list">
-        <li><span class="label">Phone</span><a href="tel:0176470752">017-647 0752</a></li>
+        <li><span class="label" data-i18n="c_phone">Phone</span><a href="tel:0176470752">017-647 0752</a></li>
         <li><span class="label">WhatsApp</span><a href="https://wa.me/60176470752" target="_blank"
             rel="noopener">017-647 0752</a></li>
-        <li><span class="label">Email</span><a href="mailto:sales@cleanupmy.com">sales@cleanupmy.com.com</a></li>
+        <li><span class="label" data-i18n="c_email">Email</span><a
+            href="mailto:sales@cleanupmy.com">sales@cleanupmy.com</a></li>
         <li><span class="label">Facebook</span><a href="https://www.facebook.com/cleanup.kl/" target="_blank"
             rel="noopener">facebook.com/cleanup.kl</a></li>
         <li><span class="label">Instagram</span><a href="https://www.instagram.com/cleanupcleaningmy" target="_blank"
             rel="noopener">@cleanupcleaningmy</a></li>
         <li><span class="label">TikTok</span><a href="https://www.tiktok.com/@cleanupcleaning" target="_blank"
-            rel="noopener">@cleanupmy</a></li>
+            rel="noopener">@cleanupcleaning</a></li>
       </ul>
     </div>
   </section>
@@ -245,15 +296,114 @@
     </div>
   </footer>
   <script>
+    /* ---------- Language switch (English default, Bahasa Melayu) ---------- */
+    var MS = {
+      tagline: 'Serahkan kerja kotor kepada kami.',
+      kicker: 'Berkhidmat di KL, Selangor &amp; Seremban sejak 2021',
+      h1: 'Selamat datang ke <em>CleanUp</em>',
+      lead1: 'Kami mengkhusus dalam perkhidmatan pencucian fabrik profesional untuk premis kediaman dan komersial. Daripada sofa, tilam dan permaidani kepada kerusi pejabat, langsir dan bahagian dalam kenderaan, pasukan terlatih kami menggunakan peralatan pencucian profesional dan teknik yang terbukti untuk menghasilkan persekitaran yang lebih bersih, segar dan sihat.',
+      lead2: 'Dengan pengalaman bertahun-tahun dalam pencucian fabrik terperinci, kami berbangga menyediakan perkhidmatan yang boleh dipercayai, hasil kerja berkualiti dan pencucian di lokasi yang mudah, supaya anda boleh serahkan kerja kotor kepada kami.',
+      btn_wa: 'Hubungi kami di WhatsApp',
+      btn_quote: 'Dapatkan sebut harga',
+      why_h: 'Mengapa pilih CleanUp',
+      why_sub: 'Piawaian yang anda boleh jangkakan setiap kali anda menempah dengan kami.',
+      why1_big: '6+ tahun', why1_h: 'Pengalaman terbukti',
+      why1_p: 'Lebih enam tahun pencucian fabrik profesional untuk rumah di seluruh Selangor, Kuala Lumpur dan Seremban.',
+      why2_big: 'Gred pro', why2_h: 'Peralatan profesional',
+      why2_p: 'Mesin dan bahan pencuci bergred profesional, dipilih mengikut jenis fabrik dan kotoran.',
+      why3_big: 'Terlatih', why3_h: 'Juruteknik mahir',
+      why3_p: 'Pasukan kami dilatih mengenal pasti jenis fabrik dan menggunakan kaedah yang sesuai untuk permaidani, sofa, langsir dan tilam anda.',
+      why4_big: '3 hari', why4_h: 'Jaminan perkhidmatan',
+      why4_p: 'Tidak berpuas hati dengan hasilnya? Maklumkan kepada kami dalam tempoh 3 hari dan kami akan datang semula untuk mencuci semula tanpa caj tambahan.',
+      svc_h: 'Apa yang kami cuci',
+      svc_sub: 'Lima jenis barangan fabrik, setiap satu dicuci dengan kaedah yang sesuai. Tekan salah satu untuk melihat foto hasil kerja kami.',
+      carpet_h: 'Pencucian permaidani',
+      carpet_p: 'Penyedutan mendalam yang mengangkat kotoran dan bau daripada permaidani dinding ke dinding dan hamparan.',
+      sofa_h: 'Sofa &amp; upholsteri',
+      sofa_p: 'Rawatan selamat untuk fabrik bagi sofa dan kerusi berupholsteri, termasuk penyingkiran kotoran dan bau.',
+      curtain_h: 'Pencucian langsir',
+      curtain_p: 'Pencucian di lokasi untuk langsir dan tirai, jadi anda tidak perlu menanggalkannya.',
+      mattress_h: 'Pencucian tilam',
+      mattress_p: 'Rawatan hama debu, peluh dan kotoran untuk memastikan tilam anda segar untuk tidur.',
+      baby_h: 'Barangan bayi',
+      baby_p: 'Pencucian lembut dan menyeluruh untuk kereta sorong, pagar permainan dan tempat duduk kereta kanak-kanak, membuang kesan susu, tumpahan dan bau.',
+      see_photos: 'Lihat foto',
+      rev_h: 'Kata pelanggan di Google',
+      rev_sub: 'Ulasan sebenar daripada pelanggan yang pernah kami layani.',
+      src: 'Ulasan Google',
+      where_h: 'Kawasan perkhidmatan kami',
+      where_sub: 'Kami datang kepada anda di tiga kawasan.',
+      area1_b: 'Selangor', area1_s: 'Shah Alam, Petaling Jaya, Kajang, Klang dan kawasan berhampiran',
+      area2_b: 'Kuala Lumpur', area2_s: 'Seluruh bandar',
+      area3_b: 'Seremban', area3_s: 'Seremban dan kawasan sekitarnya',
+      quote_h: 'Dapatkan sebut harga',
+      quote_sub: 'Beritahu kami apa yang perlu dicuci dan kami akan hantar terus ke WhatsApp kami supaya kami boleh membalas dengan sebut harga.',
+      f_name: 'Nama anda', f_phone: 'Nombor telefon anda', f_area: 'Alamat / kawasan',
+      f_items: 'Apa yang perlu dicuci?', f_notes: 'Ada apa-apa lagi yang perlu kami tahu?',
+      ph_name: 'cth. Afiq Lee', ph_phone: 'cth. 012-345 6789', ph_area: 'cth. Shah Alam, Selangor',
+      ph_items: 'cth. 1 sofa (3 tempat duduk), 2 tilam, permaidani ruang tamu',
+      ph_notes: 'cth. kesan kotoran, tarikh pilihan, butiran akses',
+      f_submit: 'Hantar pesanan melalui WhatsApp',
+      f_note: 'Ini akan membuka WhatsApp dengan pesanan anda telah diisi. Tekan hantar sahaja dan kami akan membalas dengan sebut harga.',
+      faq_h: 'Soalan lazim',
+      faq_sub: 'Jawapan pantas kepada soalan yang paling kerap ditanya pelanggan.',
+      faq1_q: 'Kawasan mana yang anda liputi?',
+      faq1_a: 'Kami berkhidmat di Selangor (termasuk Shah Alam, Petaling Jaya, Kajang dan Klang), Kuala Lumpur dan Seremban, serta kawasan berhampiran.',
+      faq2_q: 'Bagaimana untuk mendapatkan sebut harga?',
+      faq2_a: 'Isi borang sebut harga di atas, atau mesej kami di WhatsApp, dan beritahu apa yang perlu dicuci. Kami akan membalas dengan sebut harga.',
+      faq3_q: 'Adakah saya perlu membawa barangan saya kepada anda?',
+      faq3_a: 'Tidak perlu. Kami datang kepada anda dan mencuci di lokasi, jadi sofa, tilam, permaidani dan langsir anda kekal di tempatnya.',
+      faq4_q: 'Apa yang boleh anda cuci?',
+      faq4_a: 'Permaidani dan hamparan, sofa dan kerusi berupholsteri, langsir, tilam, dan barangan bayi seperti kereta sorong, pagar permainan dan tempat duduk kereta kanak-kanak. Kami juga mencuci kerusi pejabat dan bahagian dalam kenderaan.',
+      faq5_q: 'Bagaimana jika saya tidak berpuas hati dengan hasilnya?',
+      faq5_a: 'Maklumkan kepada kami dalam tempoh 3 hari dan kami akan datang semula untuk mencuci semula tanpa caj tambahan.',
+      faq6_q: 'Adakah anda mencuci rumah dan premis komersial?',
+      faq6_a: 'Ya. Kami mencuci barangan fabrik untuk pelanggan kediaman dan komersial, termasuk pejabat.',
+      faq7_q: 'Berapa lama masa untuk barangan saya kering?',
+      faq7_a: 'Ia bergantung pada fabrik, barangan dan pengudaraan bilik. Kami akan memaklumkan anggaran masa pengeringan selepas pencucian.',
+      touch_h: 'Hubungi kami', c_phone: 'Telefon', c_email: 'Emel'
+    };
+    var STATUS = {
+      en: { need: 'Please fill in your name and phone number.', items: 'Please tell us what needs cleaning.', open: 'Opening WhatsApp…', head: 'New order from the website:', n: 'Name: ', p: 'Phone: ', a: 'Area: ', i: 'Items: ', o: 'Notes: ' },
+      ms: { need: 'Sila isi nama dan nombor telefon anda.', items: 'Sila beritahu kami apa yang perlu dicuci.', open: 'Membuka WhatsApp…', head: 'Pesanan baharu dari laman web:', n: 'Nama: ', p: 'Telefon: ', a: 'Kawasan: ', i: 'Barangan: ', o: 'Nota: ' }
+    };
+    var lang = 'en';
+    var nodes = document.querySelectorAll('[data-i18n]');
+    var phNodes = document.querySelectorAll('[data-i18n-ph]');
+    var EN = {};
+    nodes.forEach(function (el) { var k = el.getAttribute('data-i18n'); if (!(k in EN)) EN[k] = el.innerHTML; });
+    phNodes.forEach(function (el) { var k = el.getAttribute('data-i18n-ph'); EN[k] = el.getAttribute('placeholder'); });
+
+    function setLang(l) {
+      lang = l === 'ms' ? 'ms' : 'en';
+      var dict = lang === 'ms' ? MS : EN;
+      nodes.forEach(function (el) { var k = el.getAttribute('data-i18n'); if (dict[k] !== undefined) el.innerHTML = dict[k]; });
+      phNodes.forEach(function (el) { var k = el.getAttribute('data-i18n-ph'); if (dict[k] !== undefined) el.setAttribute('placeholder', dict[k]); });
+      document.documentElement.lang = lang === 'ms' ? 'ms' : 'en';
+      document.querySelectorAll('.lang-btn').forEach(function (b) {
+        var on = b.getAttribute('data-lang') === lang;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+      document.getElementById('ord-status').textContent = '';
+      try { localStorage.setItem('cleanup-lang', lang); } catch (e) { }
+    }
+    document.querySelectorAll('.lang-btn').forEach(function (b) {
+      b.addEventListener('click', function () { setLang(b.getAttribute('data-lang')); });
+    });
+    try { var saved = localStorage.getItem('cleanup-lang'); if (saved === 'ms') setLang('ms'); } catch (e) { }
+
+    /* ---------- Quote form -> WhatsApp ---------- */
     document.getElementById('ord-submit').addEventListener('click', function () {
+      var T = STATUS[lang];
       var v = function (id) { return document.getElementById(id).value.trim() };
       var st = document.getElementById('ord-status'); st.classList.remove('error');
       var name = v('ord-name'), phone = v('ord-phone'), area = v('ord-area'), items = v('ord-items'), notes = v('ord-notes');
-      if (!name || !phone) { st.textContent = 'Please fill in your name and phone number.'; st.classList.add('error'); return }
-      if (!items) { st.textContent = 'Please tell us what needs cleaning.'; st.classList.add('error'); return }
-      var l = ['New order from the website:', 'Name: ' + name, 'Phone: ' + phone];
-      if (area) l.push('Area: ' + area); l.push('Items: ' + items); if (notes) l.push('Notes: ' + notes);
-      st.textContent = 'Opening WhatsApp…';
+      if (!name || !phone) { st.textContent = T.need; st.classList.add('error'); return }
+      if (!items) { st.textContent = T.items; st.classList.add('error'); return }
+      var l = [T.head, T.n + name, T.p + phone];
+      if (area) l.push(T.a + area); l.push(T.i + items); if (notes) l.push(T.o + notes);
+      st.textContent = T.open;
       window.open('https://wa.me/60176470752?text=' + encodeURIComponent(l.join('\n')), '_blank', 'noopener');
     });
   </script>
