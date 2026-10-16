@@ -359,43 +359,8 @@ a.card:hover {
 .map {
     width: 100%;
     height: auto;
-    object-fit: cover;
     border-radius: 12px;
     display: block;
-}
-
-.map .sel {
-    fill: #cfe9dc;
-    stroke: var(--green);
-    stroke-width: 2
-}
-
-.map .sn {
-    fill: #d6e6f3;
-    stroke: var(--blue);
-    stroke-width: 2
-}
-
-.map .kl {
-    fill: var(--blue)
-}
-
-.map .link {
-    stroke: var(--muted);
-    stroke-width: 1.5;
-    stroke-dasharray: 5 5;
-    fill: none
-}
-
-.map text {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 600;
-    fill: var(--text);
-    font-size: 15px
-}
-
-.map text.w {
-    fill: #fff
 }
 
 .areas {
@@ -601,6 +566,19 @@ footer a {
     font-size: .9rem
 }
 
+.footer-inner .logo {
+    display: block;
+    text-align: left;
+}
+
+.footer-inner .logo span:first-child {
+    color: var(--blue);
+}
+
+.footer-inner .logo span:last-child {
+    color: var(--green);
+}
+
 .back {
     display: inline-block;
     margin: 8px 0 20px;
@@ -768,4 +746,110 @@ button:focus-visible {
 .price-table.multi td:not(:first-child) {
     font-weight: 600;
     color: var(--blue)
+}
+.price-section {
+    margin: 28px 0;
+}
+
+.price-section .price-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.price-section .price-card {
+    aspect-ratio: 1 / 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    text-align: center;
+    background: #f3f4f6;
+    border: 2px solid #e5e7eb;
+    border-radius: 20px;
+}
+
+.price-section .price-label {
+    font-size: .95rem;
+    font-weight: 700;
+    letter-spacing: .25em;
+    text-transform: uppercase;
+    color: #2563eb;
+}
+
+.price-section .price-size {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    color: #1f2937;
+}
+
+.price-section .price-calc {
+    font-size: .95rem;
+    color: #6b7280;
+    padding-bottom: 14px;
+    border-bottom: 2px solid #d1d5db;
+}
+
+.price-section .price-amount {
+    font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+    font-weight: 800;
+    color: #16a34a;
+}
+
+.price-note {
+    margin-top: 18px;
+    text-align: center;
+    color: #374151;
+}
+
+.price-note strong {
+    color: #2563eb;
+}
+
+@media (max-width: 640px) {
+    .price-section .price-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .price-section .price-card {
+        aspect-ratio: auto;
+        padding: 28px 20px;
+    }
+}
+
+/* Curtain cleaning process */
+.process {
+    margin: 0 0 36px
+}
+
+.process h2 {
+    font-size: 1.4rem;
+    margin-bottom: 16px
+}
+
+.process .card h3 {
+    margin-bottom: 10px
+}
+
+.process .card ol {
+    margin: 0;
+    padding-left: 20px;
+    color: var(--muted);
+    font-size: .92rem
+}
+
+.process .card li {
+    margin-bottom: 6px
+}
+
+.process .card li:last-child {
+    margin-bottom: 0
+}
+
+.price-disclaimer {
+    margin-top: 14px;
+    text-align: center;
+    font-size: .85rem;
+    color: #6b7280;
 }
